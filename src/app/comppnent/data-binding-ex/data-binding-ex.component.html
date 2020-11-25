@@ -1,0 +1,17 @@
+<p>Data Binding Component Works</p>
+<h1>{{ message }}</h1>
+<p> message from function {{getmessage()}} </p>
+
+<!-- property Binding -->
+
+<p>Property Binding</p>
+<p [innerText] = "message"> property Binding</p>
+<input type="text" [value] = "message">
+
+<h1>my animal {{animal}}</h1>
+
+<!-- Event Binding -->
+
+<button (click) ="onclick()">Click me to run function</button>
+
+<button (click)="animal = 'cat'">Change Favourite Animal</button>

@@ -1,0 +1,52 @@
+<app-data-binding-ex></app-data-binding-ex>
+<app-counter-test></app-counter-test>
+
+<p>Current Value of the Counter is: <span [ngClass]="counter >= 0 ? 'positive': 'negative'">{{ counter }}</span></p>
+
+<p>Current Value of the Counter is: <span [class]="classToApply">{{ counter }}</span></p>
+
+<app-counter-test (updateCounter)="updateCounter($event)"></app-counter-test>
+
+<hr>
+
+<h2>Angular Routing Example</h2>
+
+<a [routerLink] = "['/studentLink']" >Student</a> <br/>
+<a [routerLink] = "['/studentdetailsLink']" >student details</a> <br/>
+<a [routerLink] = "['/invalidLink']" >Invalid Link</a>
+
+<!-- <div>
+    <router-outlet></router-outlet>
+</div> -->
+
+<h2>Angular Routing Example</h2>
+<!-- <button (click)="GetStudent()">Student</button>
+<button (click)="GetStudentDetails()">GetStudentDetails</button> -->
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+<h2>Angular Service Example</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Branch</th>
+            <th>DOB</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of students'>
+            <td>{{student.ID}}</td>
+            <td>{{student.FirstName}}</td>
+            <td>{{student.LastName}}</td>
+            <td>{{student.Branch}}</td>
+            <td>{{student.DOB}}</td>
+            <td>{{student.Gender}}</td>
+        </tr>
+    </tbody>
+</table>

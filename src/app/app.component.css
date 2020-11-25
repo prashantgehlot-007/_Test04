@@ -1,0 +1,12 @@
+p {
+  font-family: Lato;
+  font-weight: bolder;
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
